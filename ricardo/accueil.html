@@ -1,73 +1,92 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Bio-Data | Ricardo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
-<body class="body">
-    <h1> INFORMATION PERSONNEL</h1>
-    <img src="image/profil.jpg">
-    <BR></BR>
+<body class="cyber-interface">
+    <div class="crt-overlay"></div>
 
-    <h3>Nom:RANDRIANANTENAINA</h3>
-    <h4>Prenom: Ricardo</h4>
-    <h4>Née:Le 26 JUIN 2009 à Toamasina</h4>
-    <h4>Tèl: 0381586439</h4>
-    <H4>Address:ANDRAINJATO</H4>
-    <H4>Cituation matrimonial:Célibataire</H4>
-    <H4>E-mail: randrianantenainaricardo01@gmaila.com</H4>
-    <BR></BR>
-    <h2>FORMATION ET DIPLOME</h2>
-    <BR></BR>
-    <li>2026: premier année formation en Licence professionnelle à l'Ecole Managemente d'Innovation Technologique par cours informatique </li>
-      <li>2025:BACC</li>
-       <li>2022:BEPC</li>
-    <li>2019: CEPE</li>
+    <main class="main-frame">
+        <header class="profile-header">
+            <div class="hexagon-wrapper">
+                <img src="image/profil.jpg" alt="Ricardo" class="profile-pic">
+            </div>
+            <div class="title-block">
+                <h1 class="glitch-text" data-text="RICARDO">RICARDO</h1>
+                <h2 class="last-name">RANDRIANANTENAINA</h2>
+                <div class="status-bar">
+                    <span class="status-blink"></span> SYSTÈME OPÉRATIONNEL : EMIT L1
+                </div>
+            </div>
+        </header>
 
-     
-    
-    
-   
-    <BR></BR>
-    <H2>CONNAISSANCE LINGUISTIQUE</H2>
-    <table class="tableau">
-        <tr>
-            <th>.</th>
-            <Th>Comprendre à   L'audition</Th>
-            <th>Lire</th>
-            <th>Ecrire et rédiger </th>
-            <th>Parler et comuniquer oralement</th>
-        </tr>
-        <tr>
-            <td>francais</td>
-            <td>B</td>
-            <TD>TB</TD>
-            <TD>B</TD>
-            <TD>AB</TD>
-        </tr>
-        <tr>
-            <td>Anglais</td>
-            <td>P</td>
-            <td>P</td>
-            <td>P</td>
-            <td>P</td>
+        <div class="content-grid">
+            <section class="data-module">
+                <div class="module-header">FICHIER_PERSONNEL.exe</div>
+                <div class="module-body">
+                    <p><span class="tag">NÉ LE:</span> 26 JUIN 2009 | Toamasina</p>
+                    <p><span class="tag">TEL:</span> 038 15 864 39</p>
+                    <p><span class="tag">LOC:</span> ANDRAINJATO</p>
+                    <p><span class="tag">STATUS:</span> Célibataire</p>
+                    <p><span class="tag">MAIL:</span> <span class="email-text">randrianantenainaricardo01@gmail.com</span></p>
+                </div>
+            </section>
 
+            <section class="data-module">
+                <div class="module-header">HISTORIQUE_ACADEMIQUE</div>
+                <div class="module-body timeline">
+                    <div class="event"><span class="year">2026</span><p>L1 Informatique - EMIT</p></div>
+                    <div class="event"><span class="year">2025</span><p>Baccalauréat</p></div>
+                    <div class="event"><span class="year">2022</span><p>BEPC</p></div>
+                </div>
+            </section>
 
-        </tr>
-    </table>
-<H3>Grille d'évaluation :</H3>
-<h4>TB:Très-Bien</h4>
-<h4>B:Bien</h4>
-<h4>P: Passable</h4>
-<H4>AB:Assez-bien</H4>
-<br>
-<h2>LOISIRS ET SPORTS</h2>
-<BR></BR>
-<li>-Faire du footballe</li>
-<li>- Jouer</li>
-<li>- Ecouter la musique</li>
+            <section class="data-module wide">
+                <div class="module-header">CAPACITÉS_LINGUISTIQUES</div>
+                <div class="module-body">
+                    <table class="cyber-table">
+                        <thead>
+                            <tr>
+                                <th>LANGUE</th>
+                                <th>AUDITION</th>
+                                <th>LECTURE</th>
+                                <th>ÉCRIT</th>
+                                <th>ORAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="lang-name">FRANÇAIS</td>
+                                <td><div class="bar"><div class="fill" style="width: 80%"></div></div></td>
+                                <td><div class="bar"><div class="fill" style="width: 95%"></div></div></td>
+                                <td><div class="bar"><div class="fill" style="width: 85%"></div></div></td>
+                                <td><div class="bar"><div class="fill" style="width: 75%"></div></div></td>
+                            </tr>
+                            <tr>
+                                <td class="lang-name">ANGLAIS</td>
+                                <td><div class="bar"><div class="fill" style="width: 50%"></div></div></td>
+                                <td><div class="bar"><div class="fill" style="width: 50%"></div></div></td>
+                                <td><div class="bar"><div class="fill" style="width: 50%"></div></div></td>
+                                <td><div class="bar"><div class="fill" style="width: 50%"></div></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-    
+            <section class="data-module">
+                <div class="module-header">INTÉRÊTS_SYSTÈME</div>
+                <div class="module-body hobby-grid">
+                    <div class="hobby-card">FOOTBALL</div>
+                    <div class="hobby-card">GAMING</div>
+                    <div class="hobby-card">MUSIQUE</div>
+                </div>
+            </section>
+        </div>
+    </main>
 </body>
 </html>
