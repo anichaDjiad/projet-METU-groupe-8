@@ -1,0 +1,198 @@
+/* --- 1. CONFIGURATION DE BASE (Classique) --- */
+        :root {
+            --primary-color: #2c3e50; /* Bleu marine foncé (Corporate) */
+            --accent-color: #3498db;  /* Bleu plus vif pour les détails */
+            --bg-body: #ffffff;   /* Blanc pur */
+            --bg-card: #ffffff;       /* Blanc pur */
+            --text-main: #333333;     /* Gris foncé pour le texte */
+            --text-muted: #7f8c8d;    /* Gris moyen pour les labels */
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-family: 'Lato', sans-serif; /* Police très lisible */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Aligné en haut pour scroller si besoin */
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        /* --- 2. CONTENEUR PRINCIPAL (Style Feuille de papier) --- */
+        .container {
+            background: var(--bg-card);
+            border-top: 5px solid var(--primary-color); /* Ligne colorée en haut */
+            border-radius: 4px;
+            padding: 50px;
+            max-width: 850px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Ombre très douce */
+            
+            /* Animation d'apparition sobre */
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        /* --- 3. EN-TÊTE PROFIL --- */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            gap: 30px;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif; /* Touche de classe */
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* --- 4. TITRES DES SECTIONS --- */
+        h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border-color);
+            position: relative;
+        }
+
+        /* Petite barre bleue sous le titre pour le style */
+        h4::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        /* --- 5. LISTES CLASSIQUES --- */
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            background: transparent;
+            margin-bottom: 8px;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0; /* Ligne de séparation très fine */
+            display: flex;
+            align-items: baseline;
+            transition: padding-left 0.2s;
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        ul li:hover {
+            padding-left: 5px; /* Petit mouvement subtil */
+            background-color: transparent;
+            transform: none;
+        }
+
+        .info-label {
+            font-weight: 700;
+            color: var(--primary-color);
+            min-width: 120px; /* Aligner les colonnes */
+            display: inline-block;
+        }
+
+        /* --- 6. TABLEAU PROFESSIONNEL --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: transparent;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        tr:hover {
+            background-color: #fafafa;
+        }
+
+        /* --- 7. TAGS LOISIRS (Sobre) --- */
+        .hobbies-list {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .hobbies-list li {
+            border: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color); /* Reset du style de liste par défaut */
+            border-radius: 4px;
+            padding: 6px 15px;
+            background-color: #fafafa;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
+
+        .hobbies-list li:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            background: #fff;
+        }
+
+        /* --- 8. ANIMATIONS SOBRES --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container { padding: 25px; }
+            .profile-header { flex-direction: column; text-align: center; }
+            .info-label { display: block; margin-bottom: 2px; color: var(--accent-color); }
+            ul li { flex-direction: column; border-bottom: 1px dashed #eee; }
+        }
