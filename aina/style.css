@@ -1,0 +1,155 @@
+/* Couleurs de base */
+:root {
+    --primary-pink: #ebebf8; /* Fond doux */
+    --accent-rose: #98a9e5e4;  /* Rose romantique */
+    --dark-text: #6d597a;    /* Texte prune foncé */
+    --gold: #83a0b5;         /* Détails dorés/roses */
+}
+/* Photo de profil */
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%; /* Rend la photo ronde */
+    margin-top: 20px;
+    border: 5px solid var(--primary-pink);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol */
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(152, 169, 229, 0.3);
+}
+
+
+body {
+    background-color: var(--primary-pink);
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    background: white;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #faddfa;
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    border-bottom: 2px solid var(--primary-pink);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--accent-rose);
+    margin: 0;
+}
+
+h1 span {
+    display: block;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 300;
+}
+
+.subtitle {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+/* Titres de sections */
+h2 {
+    font-family: 'Playfair Display', serif;
+    border-bottom: 1px solid var(--primary-pink);
+    padding-bottom: 5px;
+    color: var(--gold);
+    font-size: 1.4rem;
+    margin-top: 30px;
+}
+
+.icon {
+    font-size: 0.9rem;
+    margin-right: 10px;
+    color: var(--accent-rose);
+}
+
+/* Tableau élégant */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    text-align: left;
+    background-color: var(--primary-pink);
+    padding: 10px;
+    color: var(--accent-rose);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #fdf0ef;
+}
+
+/* Mise en page colonnes */
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Footer / Infos */
+.info-grid, .footer-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.info-grid p, .footer-flex div {
+    flex: 1 1 250px;
+    background: #fffafa;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+a {
+    color: var(--accent-rose);
+    text-decoration: none;
+}
+
+/* Responsive pour téléphone */
+@media (max-width: 600px) {
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        padding: 20px;
+    }
+}
