@@ -1,0 +1,114 @@
+/* 1. Réinitialisation des marges pour un rendu propre */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Style principal du corps (Dark Mode) */
+.body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Fond sombre */
+    color: #e0e0e0; /* Texte clair */
+    line-height: 1.6;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Centre la page sur les grands écrans */
+}
+
+/* On cache les balises <br> car on va utiliser les marges CSS à la place */
+br {
+    display: none;
+}
+
+/* 3. Les Titres */
+h1 {
+    text-align: center;
+    color: #00ffcc; /* Accentuation turquoise */
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 5px solid #00ffcc; /* Petite barre décorative sur le côté */
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #b3b3b3;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+h4 {
+    color: #888888;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-left: 15px; /* Décalage pour créer une hiérarchie visuelle */
+    margin-bottom: 5px;
+}
+
+/* 4. Le Tableau des compétences */
+.tableau {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Ombre légère */
+}
+
+.tableau th, .tableau td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.tableau th:first-child, .tableau td:first-child {
+    text-align: left; /* Aligne les langues à gauche */
+    font-weight: bold;
+    color: #fff;
+}
+
+.tableau th {
+    background-color: #00ffcc;
+    color: #121212;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Style de l'image de profil */
+img {
+    display: block;
+    margin: 20px auto; /* Centre l'image et ajoute de l'espace autour */
+    width: 180px;      /* Largeur de l'image */
+    height: 180px;     /* Hauteur de l'image */
+    object-fit: cover; /* Évite que l'image soit déformée si elle n'est pas carrée */
+    border-radius: 50%; /* Rend l'image parfaitement ronde */
+    border: 3px solid #00ffcc; /* Bordure turquoise */
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.3); /* Effet de lueur légère */
+    transition: transform 0.3s ease; /* Animation fluide pour le survol */
+}
+
+/* Effet sympa quand on passe la souris sur la photo */
+img:hover {
+    transform: scale(1.05); /* L'image s'agrandit légèrement */
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.5); /* La lueur devient plus forte */
+}
+
+.tableau tr:hover {
+    background-color: #2a2a2a; /* Effet de survol sympa */
+    transition: background-color 0.3s ease;
+}
