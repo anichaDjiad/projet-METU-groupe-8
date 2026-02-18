@@ -1,0 +1,146 @@
+:root {
+    --primary: #ff7eb9;
+    --secondary: #7afcff;
+    --dark: #2d3436;
+    --glass: rgba(255, 255, 255, 0.2);
+    --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #fce4ec 0%, #e1f5fe 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    color: var(--dark);
+    padding: 20px;
+}
+
+/* Cercles décoratifs en arrière-plan */
+.background-circles .circle {
+    position: fixed;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(80px);
+}
+.c1 { width: 300px; height: 300px; background: var(--primary); top: -50px; left: -50px; }
+.c2 { width: 400px; height: 400px; background: var(--secondary); bottom: -100px; right: -50px; }
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Effet Verre (Glassmorphism) */
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Header */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+}
+
+.highlight { color: #d81b60; font-weight: 600; }
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    font-size: 0.9rem;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+/* Grilles et colonnes */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #444;
+}
+
+/* Tableaux et Badges */
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-size: 0.8rem; padding-bottom: 10px; }
+td { padding: 8px 0; font-size: 0.9rem; }
+
+.badge {
+    background: white;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Timeline */
+.timeline .item {
+    border-left: 2px solid var(--primary);
+    padding-left: 15px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.year { font-weight: bold; color: #d81b60; }
+
+/* Loisirs */
+.hobbies { display: flex; flex-wrap: wrap; gap: 10px; }
+.hobby-tag {
+    background: #ffffff;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.hobby-tag:hover { background: var(--primary); color: white; }
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-grid { grid-template-columns: 1fr; }
+    .profile-section { flex-direction: column; text-align: center; }
+}
