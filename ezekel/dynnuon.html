@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio | Dynnuon Ezekel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="reveal">
+            <img src="TAY.jpg" alt="Dynnuon Ezekel" class="profile-img">
+            <h1>Portfolio</h1>
+            <p>Étudiant & Passionné</p>
+        </header>
+
+        <section class="reveal">
+            <h2>👤 Informations Personnelles</h2>
+            <div class="info-grid">
+                <div class="info-item"><b>Nom :</b> RAFALIARIMANANA</div>
+                <div class="info-item"><b>Prénom :</b> Dynnuon Ezekel</div>
+                <div class="info-item"><b>Naissance :</b> 28 Nov. 2008</div>
+                <div class="info-item"><b>Lieu :</b> Andrainjato</div>
+                <div class="info-item"><b>Statut :</b> Célibataire</div>
+                <div class="info-item"><b>Email :</b> <span style="font-size: 0.8rem;">rafaliarimananadynnuonezekel@gmail.com</span></div>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <h2>🎓 Diplômes</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <strong>2025 : BACC</strong>
+                    <p>Baccalauréat de l'Enseignement Secondaire</p>
+                </div>
+                <div class="timeline-item">
+                    <strong>2022 : BEPC</strong>
+                    <p>Brevet d'Études du Premier Cycle</p>
+                </div>
+                <div class="timeline-item">
+                    <strong>2018 : CEPE</strong>
+                    <p>Certificat d'Études Primaires Élémentaires</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <h2>🌍 Connaissances Linguistiques</h2>
+            
+            <div class="skill-bar">
+                <div class="skill-name"><span>Français</span> <span>Niveau Passable (50%)</span></div>
+                <div class="progress-bg"><div class="progress-fill" style="width: 50%;"></div></div>
+            </div>
+
+            <div class="skill-bar">
+                <div class="skill-name"><span>Anglais</span> <span>Niveau Passable (45%)</span></div>
+                <div class="progress-bg"><div class="progress-fill" style="width: 45%;"></div></div>
+            </div>
+            
+            <p style="margin-top:15px; font-size: 0.85rem; color: #94a3b8;">
+                * Compétences incluant la communication verbale, rédaction et compréhension auditive.
+            </p>
+        </section>
+
+        <section class="reveal">
+            <h2>⚽ Sports & Loisirs</h2>
+            <div class="hobbies-list">
+                <span class="hobby-tag">⚽ Football</span>
+                <span class="hobby-tag">🎵 Musique</span>
+                <span class="hobby-tag">📖 Lecture (Bible)</span>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Petite animation pour remplir les barres de progression au chargement
+        window.addEventListener('load', () => {
+            const fills = document.querySelectorAll('.progress-fill');
+            fills.forEach(fill => {
+                const width = fill.style.width;
+                fill.style.width = '0';
+                setTimeout(() => {
+                    fill.style.width = width;
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>
