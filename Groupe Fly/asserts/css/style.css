@@ -1,0 +1,358 @@
+/* ========== BASE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  }
+  
+  body {
+    background-color: #f8fafc;  /* gris très clair professionnel */
+    color: #1e293b;  /* bleu foncé élégant */
+    line-height: 1.5;
+    scroll-behavior: smooth;
+  }
+  
+  /* ========== NAVBAR PROFESSIONNELLE ========== */
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #ffffff;  /* blanc pur - moderne */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #e2e8f0;  /* gris élégant */
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: #09079e74;  /* dégradé gris bleuté */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .logo span {
+    font-weight: 300;
+    color: #64748b;  /* gris professionnel */
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2.2rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #334155;  /* gris foncé */
+    font-size: 1.1rem;
+    transition: 0.2s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+  }
+  
+  .nav-links a:hover {
+    border-bottom-color: #3b82f6;  /* bleu vif moderne */
+    color: #0f172a;
+  }
+  
+  /* ========== SECTION SLOGAN ========== */
+  .hero-paysage {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: #3b82f6 ;  /* (bleu accent - moderne) */
+    background-size: cover;
+    background-position: center 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    isolation: isolate;
+  }
+  
+  .hero-paysage::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);  /* overlay sombre */
+    z-index: 1;
+  }
+  
+  .slogan-box {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    padding: 2rem 3.5rem;
+    border-radius: 60px;
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    margin: 0 1.5rem;
+  }
+  
+  .slogan-box h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0f172a;  /* bleu très foncé */
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  
+  .slogan-box p {
+    font-size: 1.4rem;
+    color: #334155;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    border-top: 2px solid #cbd5e1;
+    padding-top: 0.8rem;
+  }
+  
+  .slogan-box small {
+    font-size: 1.1rem;
+    color: #475569;
+  }
+  
+  /* ========== SECTION ÉQUIPE ========== */
+  .team-section {
+    max-width: 1300px;
+    margin: 3rem auto 4rem;
+    padding: 0 5%;
+  }
+  
+  .section-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 2rem;
+    border-left: 10px solid #3b82f6;  /* bleu accent */
+    padding-left: 1.5rem;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* carte membre style professionnel */
+  .membre-card {
+    background: #ffffff;  /* blanc pur */
+    border-radius: 24px;
+    box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e2e8f0;  /* bordure grise élégante */
+  }
+  
+  .membre-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .photo-wrapper {
+    height: 200px;
+    overflow: hidden;
+    background: #f1f5f9;  /* gris très clair */
+  }
+  
+  .photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+  }
+  
+  .membre-card:hover .photo-wrapper img {
+    scale: 1.05;
+  }
+  
+  .info-min {
+    padding: 1.5rem 1.2rem 0.8rem;
+  }
+  
+  .info-min h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0f172a;
+    line-height: 1.2;
+  }
+  
+  .info-min p {
+    color: #475569;
+    font-size: 1rem;
+    margin: 0.25rem 0 0.2rem;
+  }
+  
+  .btn-plus {
+    background: none;
+    border: none;
+    margin: 0.8rem 1.2rem 1.5rem 1.2rem;
+    padding: 0.7rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #3b82f6;  /* bleu accent */
+    border-top: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .btn-plus:hover {
+    color: #2563eb;  /* bleu plus foncé au hover */
+    gap: 12px;
+  }
+  
+  /* ========== MODALE ========== */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(162, 42, 42, 0.5);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .modal:target {
+    display: flex;
+  }
+  
+  .modal-contenu {
+    background: white;
+    max-width: 500px;
+    width: 90%;
+    border-radius: 40px;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: fadeIn 0.3s;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0.7; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  .modal-header {
+    background: #0f172a;  /* bleu foncé élégant */
+    color: white;
+    padding: 1.8rem 2rem;
+  }
+  
+  .modal-header h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .modal-header p {
+    font-size: 1.1rem;
+    opacity: 0.85;
+  }
+  
+  .modal-details {
+    padding: 2rem;
+    background: #f8fafc;
+  }
+  
+  .detail-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+    border-bottom: 1px dashed #cbd5e1;
+    padding-bottom: 0.6rem;
+  }
+  
+  .detail-label {
+    font-weight: 600;
+    width: 110px;
+    color: #334155;
+  }
+  
+  .detail-value {
+    color: #0f172a;
+  }
+  
+  .modal-fermer {
+    display: inline-block;
+    margin: 0.5rem 2rem 2rem 2rem;
+    background: #f1f5f9;
+    padding: 0.8rem 2rem;
+    border-radius: 60px;
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 600;
+    transition: 0.2s;
+    border: 1px solid #cbd5e1;
+    text-align: center;
+  }
+  
+  .modal-fermer:hover {
+    background: #e2e8f0;
+  }
+  
+  /* ========== FOOTER PROFESSIONNEL ========== */
+  .footer {
+    background-color: #0f172a;  /* bleu très foncé élégant */
+    color: #f1f5f9;
+    padding: 2.5rem 5% 2rem;
+    margin-top: 4rem;
+    border-top: 5px solid #3b82f6;  /* accent bleu */
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .footer-links span {
+    font-size: 1.2rem;
+    background: #1e293b;  /* bleu foncé */
+    padding: 0.3rem 1.2rem;
+    border-radius: 40px;
+    color: #f1f5f9;
+  }
+  
+  .footer-copy {
+    font-size: 1rem;
+    opacity: 0.9;
+    color: #cbd5e1;
+  }
+  
+  .footer-copy strong {
+    color: #fbbf24;  /* doré élégant */
+  }
+  
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 700px) {
+    .navbar {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .slogan-box h1 {
+      font-size: 2.2rem;
+    }
+    .section-title {
+      font-size: 2rem;
+    }
+  }
