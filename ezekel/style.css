@@ -7,6 +7,44 @@
             --text-light: #f8fafc;
         }
 
+        
+.btn-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: white;
+    color: var(--accent-rose);
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--primary-pink);
+    transition: all 0.3s ease;
+    z-index: 1000; /* Pour qu'il reste au-dessus de tout */
+}
+
+.btn-back:hover {
+    background-color: var(--accent-rose);
+    color: white;
+    transform: translateX(-5px); /* Petit effet de mouvement vers la gauche */
+    box-shadow: 0 6px 20px rgba(152, 169, 229, 0.4);
+}
+
+/* Ajustement pour mobile (pour éviter qu'il ne cache le texte) */
+@media (max-width: 800px) {
+    .btn-back {
+        position: relative; /* Repasse en flux normal sur petit écran */
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+        display: inline-flex;
+    }
+}
         * {
             margin: 0;
             padding: 0;
